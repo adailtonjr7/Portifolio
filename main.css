@@ -1,31 +1,62 @@
+/* Estilo base da página */
 body {
-
-    font-family: arial,sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
-    margin:0;
-    padding:0
+    font-family: arial, sans-serif;
+    background-color: #f2f2f2; /* Fundo claro padrão */
+    color: #333; /* Cor do texto padrão */
+    margin: 0;
+    padding: 0;
 }
 
-
+/* Container centralizado com fundo branco e sombra suave */
 .container {
     max-width: 600px;
     margin: 50px auto;
-    background-color:white;
-    padding: 30px;
+    background-color: white;
+    padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0,1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Corrigido: sombra mais leve */
 }
 
+/* Título principal */
 h1 {
-    text-align: 18px;
-    color: #007bff;
-
+    text-align: center; /* Corrigido: valor válido */
+    color: #007bff; /* Azul destaque */
 }
 
+/* Parágrafos do texto */
 p {
-
-    font-size:18px;
+    font-size: 18px;
     line-height: 1.6;
+}
 
+/* Estilo para o botão de modo escuro */
+#modo-escuro {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+}
+
+/* Ícone dentro do botão */
+#modo-escuro i {
+    margin-right: 8px;
+}
+
+/* Estilo ativado ao clicar no modo escuro */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+}
+
+body.dark-mode .container {
+    background-color: #333;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode a {
+    color: #4da6ff;
 }
