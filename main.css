@@ -60,3 +60,39 @@ body.dark-mode .container {
 body.dark-mode a {
     color: #4da6ff;
 }
+
+.projetos {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card-projeto {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.card-projeto h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.card-projeto a {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.card-projeto a:hover {
+    background-color: #0056b3;
+}
