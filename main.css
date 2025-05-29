@@ -23,6 +23,8 @@ h1 {
     color: #007bff; /* Azul destaque */
 }
 
+
+
 /* Parágrafos do texto */
 p {
     font-size: 18px;
@@ -95,4 +97,9 @@ body.dark-mode a {
 
 .card-projeto a:hover {
     background-color: #0056b3;
+}
+
+card-projeto.dark-mode h3 {
+    color: #007bff;
+    margin-bottom: 10px;
 }
