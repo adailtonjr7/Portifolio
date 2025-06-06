@@ -1,29 +1,69 @@
 /* Estilo base da página */
 body {
     font-family: arial, sans-serif;
-    background-color: #f2f2f2; /* Fundo claro padrão */
-    color: #333; /* Cor do texto padrão */
+    background-color: #f2f2f2;
+    /* Fundo claro padrão */
+    color: #333;
+    /* Cor do texto padrão */
     margin: 0;
     padding: 0;
 }
 
 /* Container centralizado com fundo branco e sombra suave */
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 50px auto;
     background-color: white;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Corrigido: sombra mais leve */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    /* Corrigido: sombra mais leve */
+}
+
+.projetos {
+    display: flex;              /* Coloca os cards lado a lado */
+    flex-wrap: wrap;            /* Permite que quebrem linha em telas menores */
+    justify-content: center;    /* Alinha os cards no centro horizontalmente */
+    gap: 20px;                  /* Espaço entre os cards */
+    margin: 20px 0;             /* Espaçamento vertical */
+    width: 100%;                /* Ocupa toda a largura disponível */
+}
+
+.card-projeto {
+    width: 220px;               /* Largura fixa para cada card */
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;     /* Corrigido: border solid em vez de auto */
+    border-radius: 8px;
+    background-color: #fafafa;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-projeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* Título principal */
 h1 {
-    text-align: center; /* Corrigido: valor válido */
-    color: #007bff; /* Azul destaque */
+    text-align: center;
+    color: #007bff;
+    /* Azul destaque */
 }
 
+.card-projeto h3 {
+    text-align: center;
+    color: #007bff;
+    margin-top: 10px;
+}
 
+.card-projeto p {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 14px;
+}
 
 /* Parágrafos do texto */
 p {
@@ -31,21 +71,63 @@ p {
     line-height: 1.6;
 }
 
+.menu-nav {
+  background-color: #f9f9f9;
+  padding: 12px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  margin: 20px auto;
+  
+}
+
+.menu-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 40px;
+}
+
+.menu-nav li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-nav li a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+
 /* Estilo para o botão de modo escuro */
-#modo-escuro {
+.dark-btn {
     background-color: #333;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
-    margin: 10px;
+    margin: 10px 0;
     font-size: 16px;
+    display: block;
 }
 
-/* Ícone dentro do botão */
-#modo-escuro i {
-    margin-right: 8px;
+body.dark-mode .menu-nav {
+  background-color: #222;
+}
+
+body.dark-mode .menu-nav li a {
+  color: #ddd;
+}
+
+body.dark-mode .menu-nav li a:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 /* Estilo ativado ao clicar no modo escuro */
@@ -63,43 +145,15 @@ body.dark-mode a {
     color: #4da6ff;
 }
 
-.projetos {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.card-projeto {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fafafa;
-}
-
-.card-projeto h3 {
-    color: #007bff;
-    margin-bottom: 10px;
-}
-
-.card-projeto a {
-    text-decoration: none;
-    color: white;
-    background-color: #007bff;
-    padding: 6px 12px;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.card-projeto a:hover {
-    background-color: #0056b3;
-}
-
-card-projeto.dark-mode h3 {
-    color: #007bff;
-    margin-bottom: 50px;
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+    
+    .card-projeto {
+        width: 100%;
+        max-width: 300px;
+    }
 }
